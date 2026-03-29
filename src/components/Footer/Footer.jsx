@@ -4,11 +4,9 @@ import {NavLink, useLocation, useNavigate} from "react-router-dom";
 import {useAuth} from "../../context/UserContext.jsx";
 
 const Footer = () => {
-    const location = useLocation();
     const contactUrl = ['/public-board', '/private-board', /^\/board\/\d+$/];
     const showContact = contactUrl.includes(location.pathname);
     const {user, logoutContext} = useAuth()
-    console.log(location);
     const navigate = useNavigate();
     const handleLogout = () => {
         navigate('/login')

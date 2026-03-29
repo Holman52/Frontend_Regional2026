@@ -6,7 +6,6 @@ import {useAuth} from "../../context/UserContext.jsx";
 
 const Navigation = () => {
     const {user, logoutContext} = useAuth()
-    console.log(location);
    const navigate = useNavigate();
     const handleLogout = () => {
         navigate('/login')

@@ -8,6 +8,14 @@ const api = axios.create({
     }
 })
 
+export const apiRegister = (data)=>{
+    return api.post('/auth/register', data)
+}
 export const apiLogin = (data)=>{
-    return api.post('/login', data)
+    return api.post('/auth/login', data)
+}
+export const apiGetPublicBoard = (params = {})=>{
+    return api.get('/public-boards',{
+        params
+    })
 }
